@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  * Traveller Controller
- * @author Joshua Podhola
+ * @author Charvin Patel
  */
 @RestController
 @RequestMapping("/admin/traveller")
