@@ -126,6 +126,14 @@ public class TicketController {
 		routes = ticketService.getAllRoutes();
 		return routes;
 	}
+	
+	
+	// Add flight to book a ticket
+	@PostMapping("/routes/flight/add")
+	public String saveFlight(@RequestBody Flight flight) {
+		ticketService.addFlight(flight);
+		return "Flight Successfully Added!";
+	}
 
 
    @DeleteMapping("/delete")

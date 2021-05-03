@@ -60,15 +60,23 @@ public class TicketService {
         return ticketDao.findByFlight_Route_Destination_CityLike(flightRouteDestinationCity);
     }
     
+    
+    // Show all flights to book a ticket
 	public List<Flight> getAllFlights(){
-		List<Flight> flights = flightDao.findAll();
-		return flights;
+		return flightDao.findAll();
 	}
 	
+	
+	// Show all routes to book a ticket
 	public List<Route> getAllRoutes(){
-		List<Route> routes = routeDao.findAll();
-		return routes;
+		return routeDao.findAll();
 	}
+	
+	// Add Flight to book a ticket
+	public void addFlight(Flight flight)  
+	{    
+		flightDao.save(flight);    
+	}  
 
 
     /**
