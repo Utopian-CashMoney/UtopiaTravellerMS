@@ -1,8 +1,10 @@
 package com.ss.utopia.service;
 
 import com.ss.utopia.dao.FlightDao;
+import com.ss.utopia.dao.RouteDao;
 import com.ss.utopia.dao.TicketDao;
 import com.ss.utopia.entity.Flight;
+import com.ss.utopia.entity.Route;
 import com.ss.utopia.entity.Ticket;
 import com.ss.utopia.entity.TicketPK;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,10 +26,14 @@ public class TicketService {
     
     @Autowired
     private FlightDao flightDao;
+    
+    @Autowired
+    private RouteDao routeDao;
 
-    public List<Ticket> getAll() {
+    public List<Ticket> getAllTickets() {
         return ticketDao.findAll();
     }
+    
 
     public List<Ticket> searchByMembershipNumber(String membershipNumber) {
         return ticketDao.findByTraveller_MembershipNumberLike(membershipNumber);
@@ -54,9 +60,14 @@ public class TicketService {
         return ticketDao.findByFlight_Route_Destination_CityLike(flightRouteDestinationCity);
     }
     
-	public List<Flight> findFlights(){
+	public List<Flight> getAllFlights(){
 		List<Flight> flights = flightDao.findAll();
 		return flights;
+	}
+	
+	public List<Route> getAllRoutes(){
+		List<Route> routes = routeDao.findAll();
+		return routes;
 	}
 
 

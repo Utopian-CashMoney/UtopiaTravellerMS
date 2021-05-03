@@ -1,5 +1,6 @@
 package com.ss.utopia.controller;
 import com.ss.utopia.entity.Flight;
+import com.ss.utopia.entity.Route;
 import com.ss.utopia.entity.Ticket;
 import com.ss.utopia.entity.TicketPK;
 import com.ss.utopia.service.TicketService;
@@ -28,7 +29,7 @@ public class TicketController {
    @GetMapping("/all")
    public List<Ticket> getAll() {
        try {
-           return ticketService.getAll();
+           return ticketService.getAllTickets();
        } catch (Exception e) {
            e.printStackTrace();
            return null;
@@ -109,12 +110,21 @@ public class TicketController {
        }
    }
    
-	// Read All Flights
+	// Read All Flights for booking the ticket
 	@GetMapping("/flight/read")
 	public List<Flight> getFlights() {
 		List<Flight> flights = new ArrayList<>();
-		flights = ticketService.findFlights();
+		flights = ticketService.getAllFlights();
 		return flights;
+	}
+	
+	
+	// Read All Routes for booking the ticket
+	@GetMapping("/route/read")
+	public List<Route> getRoutes() {
+		List<Route> routes = new ArrayList<>();
+		routes = ticketService.getAllRoutes();
+		return routes;
 	}
 
 
