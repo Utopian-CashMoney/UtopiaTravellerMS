@@ -14,8 +14,8 @@ import java.util.List;
 import java.util.Objects;
 
 /**
-* Controllers for administrative Ticket-related CRUD operations...
-* @author Joshua Podhola
+* Ticket Controller
+* @author Charvin Patel
 */
 
 @RestController

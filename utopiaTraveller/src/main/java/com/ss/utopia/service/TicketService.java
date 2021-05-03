@@ -13,8 +13,8 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 /**
- * Admin service for Ticket-related CRUD operations
- * @author Joshua Podhola
+ * Ticket Service
+ * @author Charvin Patel
  */
 @Service
 @Transactional

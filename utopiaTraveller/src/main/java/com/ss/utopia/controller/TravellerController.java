@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 /**
- * Controllers for administrative Traveller-related CRUD operations...
+ * Traveller Controller
  * @author Joshua Podhola
  */
 @RestController

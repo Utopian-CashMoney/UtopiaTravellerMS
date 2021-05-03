@@ -14,7 +14,6 @@ public class TravellerService {
 
     /**
      * Get all Travellers in the database.
-     * @author Joshua Podhola
      * @return List of all travellers.
      */
     public List<Traveller> all() {
@@ -23,7 +22,6 @@ public class TravellerService {
 
     /**
      * Search by given name.
-     * @author Joshua Podhola
      * @param givenName Given name query.
      * @return List of all matching travellers.
      */
@@ -33,7 +31,6 @@ public class TravellerService {
 
     /**
      * Search by family name.
-     * @author Joshua Podhola
      * @param familyName Family name to search by.
      * @return A list of matching travellers.
      */
@@ -72,7 +69,6 @@ public class TravellerService {
 
     /**
      * Update the family name of a traveller by their membership number IF AND ONLY IF one traveller matches that number.
-     * @author Joshua Podhola
      * @param membershipNumber Membership number
      * @param newFamilyName New family name
      * @return Null if more than one match, true if one match and changes saved, false if no matches.
@@ -93,7 +89,6 @@ public class TravellerService {
 
     /**
      * Create a new traveller
-     * @author Joshua Podhola
      * @param traveller The traveller to create
      */
     public Traveller create(Traveller traveller) {
